@@ -17,3 +17,6 @@ Thumbs.db
 
 # Large data files
 data/raw/
+
+# PyCharm
+.idea/
