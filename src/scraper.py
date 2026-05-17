@@ -15,9 +15,9 @@ def get_match_links(url):
 
     matches = []
 
-    for a in soup.find_all("a", href=True):
-        match_text = a.get_text(strip=True)
-        href = a["href"]
+    for suburl in soup.find_all("a", href=True):
+        match_text = suburl.get_text(strip=True)
+        href = suburl["href"]
 
         if "(ATP)" in match_text or "(WTA)" in match_text:
             full_link = urljoin(url, href)
